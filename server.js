@@ -6,20 +6,17 @@ function logger(req,res,next) {
   next()
 }
 
-function hiKryste(name) {
-  console.log(name)
+function hello(req,res,next) {
+  res.write('Hello World')
+  next()
 }
-// function hello(req,res,next) {
-//   res.write('Hello World')
-//   next()
-// }
-// function goodbye(req,res,next) {
-//   res.write('GoodBye World')
-//   res.end()
-// }
+function goodbye(req,res,next) {
+  res.write('GoodBye World')
+  res.end()
+}
 
 app.use(logger);
-// app.get('/hello',hello,goodbye)
+app.get('/hello',hello,goodbye)
 
 
 const server = app.listen(3000)
