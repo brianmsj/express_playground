@@ -5,6 +5,10 @@ function logger(req,res,next) {
   console.log((new Date(), req.method, req.url));
   next()
 }
+
+function hiKryste(name) {
+  console.log(name)
+}
 // function hello(req,res,next) {
 //   res.write('Hello World')
 //   next()
